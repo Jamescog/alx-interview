@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Implementation of lockboxes"""
+
+
 def canUnlockAll(boxes):
     """
     Determines if all the boxes can be opened.
@@ -8,6 +12,8 @@ def canUnlockAll(boxes):
         box may contain keys to the other boxes.
     return: True if all boxes can be opened, else False.
     """
+
+
     opened = set([0])
     keys = [0]
 
