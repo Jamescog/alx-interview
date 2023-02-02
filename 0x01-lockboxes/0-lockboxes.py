@@ -14,13 +14,15 @@ def canUnlockAll(boxes):
     """
 
 
+    if not boxes:
+        return False
     opened = set([0])
     keys = [0]
 
     while keys:
         box = keys.pop()
         for key in boxes[box]:
-            if key not in opened:
+            if key not in opened and key < len(boxes):
                 opened.add(key)
                 keys.append(key)
 
