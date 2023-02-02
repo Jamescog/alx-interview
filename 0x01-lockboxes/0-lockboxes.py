@@ -13,7 +13,6 @@ def canUnlockAll(boxes):
     return: True if all boxes can be opened, else False.
     """
 
-
     if not boxes:
         return False
     opened = set([0])
@@ -27,4 +26,3 @@ def canUnlockAll(boxes):
                 keys.append(key)
 
     return len(opened) == len(boxes)
-
