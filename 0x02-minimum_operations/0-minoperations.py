@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+"""
+    File: 0-minoperations.py
+    
+"""
 def minOperations(n):
     """
     Given a number n, this function calculates the fewest number of operations
