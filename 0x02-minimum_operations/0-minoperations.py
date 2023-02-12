@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
     File: 0-minoperations.py
-    
+
 """
 def minOperations(n):
     """
