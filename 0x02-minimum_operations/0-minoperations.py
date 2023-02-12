@@ -15,17 +15,16 @@ def minOperations(n):
     :return: an integer representing the minimum number of operations required
     """
     
-    def minOperations(n):
-        if n <= 0:
+    def minOperations(n) -> int:
+        if type(n) != int or n <= 0:
             return 0
-        operations = 0
+        ops_count = 0
         i = 2
         while i <= n:
-            operations += 1
-            if n % i == 0:
-                n = n // i
-            else:
-                i += 1
-        return operations + 1
+            while n % i == 0:
+                ops_count += 2
+                n /= i
+            i += 1
+        return ops_count + 1
 
 
