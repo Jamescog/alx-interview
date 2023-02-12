@@ -14,17 +14,17 @@ def minOperations(n):
     :param n: an integer representing the target number of H characters
     :return: an integer representing the minimum number of operations required
     """
+    if n <= 0:
+        return 0
     
-    def minOperations(n) -> int:
-        if type(n) != int or n <= 0:
-            return 0
-        ops_count = 0
-        i = 2
-        while i <= n:
-            while n % i == 0:
-                ops_count += 2
-                n /= i
-            i += 1
-        return ops_count + 1
+    operations = 0
+    while n != 1:
+        operations += 1
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n -= 1
+    
+    return operations + 1
 
 
