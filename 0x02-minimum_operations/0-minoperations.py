@@ -15,15 +15,15 @@ def minOperations(n):
     :return: an integer representing the minimum number of operations required
     """
     
-    if n <= 0:
-        return 0
-    
-    operations = 0
-    while n != 1:
-        operations += 1
-        if n % 2 == 0:
-            n //= 2
-        else:
-            n -= 1
-    
-    return operations + 1
+    def minOperations(n):
+        if n <= 0:
+            return 0
+
+        copy, paste = 1, 0
+        while copy < n:
+            paste_temp = paste + 1
+            copy += copy
+            paste = paste_temp
+
+        return paste
+
