@@ -18,12 +18,14 @@ def minOperations(n):
     def minOperations(n):
         if n <= 0:
             return 0
+        operations = 0
+        i = 2
+        while i <= n:
+            operations += 1
+            if n % i == 0:
+                n = n // i
+            else:
+                i += 1
+        return operations + 1
 
-        copy, paste = 1, 0
-        while copy < n:
-            paste_temp = paste + 1
-            copy += copy
-            paste = paste_temp
-
-        return paste
 
