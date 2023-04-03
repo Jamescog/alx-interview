@@ -25,7 +25,7 @@ def generate_primes(n: int):
     return primes
 
 
-def is_winner(x: int, nums):
+def isWinner(x: int, nums):
     """Determines who is the winner
 
         Params:
